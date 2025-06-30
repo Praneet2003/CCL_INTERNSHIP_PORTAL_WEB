@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Central Coal Feild Internship Portal.com</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        body{
+            background-color: rgb(0,0,33);
+            color: white;
+        }
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height:80px;
+            background-color: rgb(18, 18, 62);
+        }
+        nav ul{
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li{
+            list-style: none;
+            margin: 0 23px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        nav ul li a:hover{
+            color: lavender;
+            font-size: 1.04rem;
+        }
+        .left{
+            font-size: 2.2rem;
+        }
+        .firstSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;  /* Ensures vertical alignment */
+    padding: 60px 0;      /* Add vertical space for visibility */
+    min-height: 100vh;    /* Make it fill full viewport height */
+    
+    background-image: url("background\ mines.jpg");  /* Replace with your image path */
+    background-size: cover;      /* Fully cover the section */
+    background-position: center 20%; /* Keep the image centered */
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+
+.firstSection::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 33, 0.5);  /* Optional overlay for text readability */
+    z-index: -1;
+}
+
+        .leftSection{
+            /* background-color: red; */
+            width: 38%;
+            font-size: 2rem;
+            margin: 30px 0;
+            /* margin-bottom: 0 10px; */
+        }
+        .leftSection, .rightSection{
+            margin-top: -40px;
+            z-index: 2;
+        }
+        .rightSection{
+            /* background-color: red; */
+            width: 45%;
+            min-height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 0;
+        }
+        /* .rightSection img{
+            width: 100%;
+            margin: 80px 0;
+        } */
+        .purple{
+            color: blueviolet;
+        }
+        .secondSection{
+            max-width: 80vw;
+            margin: auto;
+        }
+        #elements{
+            color: blueviolet;
+        }
+        #contact{
+            margin: 15px 60px; 
+            text-align: left;
+            /* width: 8%; */
+            font-size: 1.2rem;
+            max-width: 90vw;
+            align-content: baseline;
+            margin: 30px 80px;
+        }
+        /* #contact h2{
+            /* align-items: center; */
+            /* text-align: center; */
+            /* color: blueviolet; */
+        /* } */ 
+        .ContactContainer{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .ContactContainer div{
+            flex : 1;
+            min-width: 250px;
+        }
+        .ContactContainer a{
+            color: lightblue;
+            text-decoration: none;
+        }
+        .ContactContainer a:hover{
+            text-decoration: underline;
+        }
+        .ContactContainer .Third h2{
+            margin-bottom: 10px;
+            color: blueviolet;
+            text-align: center;
+        }
+        .ContactContainer .Third p{
+            text-align: center;
+            margin: 0px 0px;
+        }
+        .ContactContainer .Third img{
+            width: 30px;
+            margin: 5px;
+            height: 30px;
+            vertical-align: middle;
+        }
+        #contact p{
+            /* align-items: ; */
+            justify-content: left;
+            align-self: flex-start;
+        }
+        .ContactContainer .second h2{
+            color: blueviolet;
+            text-align: left;
+            align-items: start;
+        }
+        .ContactContainer .first h2{
+            color: blueviolet;
+            text-align: left;
+            align-items: start;
+        }
+        /* Dropdown container */
+.dropdown {
+    position: relative;
+    color: black;
+    /* background-color: black; */
+}
+
+/* Hide the dropdown content by default */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(18, 18, 62);
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1000;
+    color: black;
+}
+
+/* Style for dropdown links */
+.dropdown-content li {
+    padding: 10px 16px;
+    text-align: left;
+}
+
+.dropdown-content li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    background-color: rgb(60, 60, 120);
+}
+
+/* Show the dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.carousel {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    /* background-color: black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel img.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel img.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(18, 18, 62);
+    color: gray;
+    margin-top: 40px;
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class = "left">Central Coal Feild Limited</div>
+            <div class = "right">
+                <ul>
+                    <li><a href="https://www.centralcoalfields.in/ind/index_h.php">About</a></li>
+                    <!-- <li><a href="/">Services</a></li> -->
+                    <li class="dropdown">
+                        <a href="#">Services</a>
+                        <ul class="dropdown-content">
+                            <!-- <li><a href="">Internship Programs</a></li> -->
+                            <li><a href="Certificate.html">Internship Programs</a></li>
+                            <!-- <li><a href="#">Training Modules</a></li> -->
+                            <!-- <li><a href="#">Project Work</a></li> -->
+                        </ul>
+                    </li>
+
+                    <!-- <li><a href="/">Home</a></li> -->
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="Register.html">Register</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class = "firstSection">
+            <div class = "leftSection">Welcome to our<span class="purple"> Summer <br> Internship</span> Portal.
+                <!-- <div> Portal </div> -->
+                <br><br><span id="element"><br></span>
+                </div>
+            <div class = "rightSection">
+                <!-- <img src = "CCL logo.jpg" alt =""> -->
+                <div class="carousel">
+                    <img class="slide" src="CCL logo.jpg" alt="Slide 1">
+                    <img class="slide" src="img 1.jpg" alt="Slide 2">
+                    <img class="slide" src="img 2.jpg" alt="Slide 3">
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="secoundSection">
+        </section>
+        <section id="contact">
+            <div class = "ContactContainer">
+                <div class = "first">
+                    <h2>Contacts</h2>
+                    <br>
+                    <p><b>Email:</b> <a href="mailto:hr@ccl.gov.in">hrd@ccl.gov.in</a></p>
+                    <!-- <br> -->
+                    <p><b>Phone:</b> +91-1234567890</p>
+                    <br>
+                    </div>
+                <div class = "second">
+                    <h2>Address </h2>
+                    <br>
+                    <p> Darbhanga House<br> Central Coalfields Ltd.<br> Kutchery Road, Ranchi, Jharkhand</p>
+                </div>
+                <div class = "Third">
+                    <!-- <br> -->
+                    <h2>Follow Us On</h2>
+                    <p><a href="https://www.facebook.com/CentralCoalfieldsLtd/?fref=ts"><img src = "facebook-logo.png",alt = "Facebook"></a> <a href="https://www.instagram.com/centralcoalfieldsltd/"><img src="insta-removebg-preview.png"></a><a href=""><img src="twitter-logo-11549680523gyu1fhgduu-removebg-preview.png"></a><a href="https://www.linkedin.com/company/central-coalfields-limited"><img src="linkedin-removebg-preview.png"></a>
+                    <a href="https://www.youtube.com/channel/UCsIb8i_OoYZU6xDeMbXa8Zw"><img src="youtube_logo-removebg-preview.png"></a></p>
+                </div>
+        </div>
+        <!-- <p>Address: Central Coalfields Limited, Ranchi, Jharkhand, India</p> -->
+</section>
+
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- <script>
+        var typed = new Typed('#element', {
+        strings: ["Aspiring Data Analyst", "Proficient in Python,C,C++,JAVA with DSA","Life Long Learner"],
+        typeSpeed: 50,
+        });
+    </script> -->
+    <br>
+    <footer>
+    © 2025 Central Coalfields Limited | Internship Portal
+    </footer>
+    <script>
+    var typed = new Typed('#element', {
+        strings: [
+            // "\n"
+            "Welcome to Central Coalfields Limited Internship Portal",
+            "A Maharatna Company under Coal India Limited",
+            "Opportunities in Mining, Engineering, HR, and IT",
+            "Learn from India's Leading Coal Producer",
+            "Contribute to Sustainable and Smart Mining",
+            "Real-world Projects | Expert Mentorship | Certificate of Completion"
+        ],
+        typeSpeed: 40,
+        backSpeed: 20,
+        loop: true
+    });
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    function showSlides() {
+    slides.forEach((slide, index) => {
+        slide.classList.remove('active');
+    });
+    slideIndex = (slideIndex + 1) % slides.length;
+    slides[slideIndex].classList.add('active');
+    }
+    // Show the first slide initially
+    slides[0].classList.add('active');
+    // Change slide every 2 seconds
+    setInterval(showSlides, 2000);
+
+</script>
+</body>
+</html>
